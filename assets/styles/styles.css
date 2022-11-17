@@ -3,19 +3,19 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
 /*header section*/
 .header{
-    background-color: #1c1b1b;
+    background-color: #000001;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     height: 85px;
-    padding: 5px 10%;
+    padding: 5px 3%;
 }
 .header .logo{
     cursor: pointer;
     margin-right: auto;
 }
 .header .logo img{
-    height: 70px;
+    height: 60px;
     width: auto;
     transition: all 0.3s;
 }
@@ -42,8 +42,9 @@
     color: #46ff48;
 }
 .header .btn button{
+    font-size: 18px;
     margin-left: 20px;
-    font-weight: 30;
+    font-weight: 700;
     color: #1c1b1b;
     padding: 9px 25px;
     background: #f7f7f7;
@@ -75,19 +76,23 @@ footer {
     position: relative;
     bottom: 0;
     left: 0;
-    padding: 2rem 8%;
-    background-color: rgba(255, 255, 255, 0.76);
+    background-image: url("../images/fondohojas.jpg");
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: soft-light;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+footer img{
+    height: 150px;
 }
 .social-icons-container,.footer-menu-container{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
 
 }
 .social-icons{
@@ -134,7 +139,10 @@ footer {
     color: #1c1b1b;
     opacity: 1;
     text-align: center;
+    margin-bottom: 20px;
 }
+
+/*main section*/
 html {
     font: normal 16px sans-serif;
     scroll-behavior: smooth !important;
@@ -144,20 +152,26 @@ ul{
     list-style: none;
 }
 
-a{
+.hero a{
     text-decoration: none;
     color: inherit;
     cursor: pointer;
-    opacity: 0.9;
+
 }
-a.btn{
-    color: #fff;
-    border-radius: 5px;
+.hero a.btn{
+    font-size: 18px;
+    color: #ffffff;
+    border-radius: 50px;
     text-transform: uppercase;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6);
     background-color: #46ff48;
-    font-weight: 800;
+    font-weight: 600;
     text-align: center;
-    padding: 5px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease 0s;
 }
 
 hr {
@@ -184,14 +198,14 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 125px 100px;
+    padding: 120px 100px;
 }
 
 section h3.title {
     color: #1c1b1b;
     text-transform: capitalize;
-    font: bold 32px 'Open Sans', sans-serif;
-    margin-bottom: 35px;
+    font: bold 36px 'Open Sans', sans-serif;
+    margin-bottom: 50px;
     text-align: center;
 }
 
@@ -242,6 +256,7 @@ ul.grid {
 .hero h1{
     font: bold 60px'Open Sans', sans-serif;
     margin-bottom: 15px;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0);
 }
 
 .hero h3{
@@ -254,44 +269,62 @@ ul.grid {
     background-color: white;
 }
 
-.our-work .grid li{
-    padding: 30px;
-    height: 350px;
-    border-radius: 3px;
+.our-work .grid img{
 
-    background-clip: content-box;
-    background-size: cover;
-    background-position: center;
-    background-color: #333;
 }
 
 /* Services Section*/
 
 .services {
+    width: 100%;
+    display: flex;
     background-color: #99fd76;
 }
+.card {
+    width: 35%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0px 1px 10px rgb(0,0,0,0.2);
+    cursor: default;
+    transition: all 400ms ease;
+    padding: 10px;
+    position: relative;
+    right: 400px;
 
-.services .grid li{
-    padding: 0 50px;
-    flex-basis: 33%;
+}
+.card:hover{
+    box-shadow: 5px 5px 20px rgb(0,0,0,0.4);
+    transform: translateY(-3%);
+}
+.card .contenido{
+    padding: 15px;
     text-align: center;
 }
-
-.services .grid li i{
-    color: #005eff;
-    font-size: 50px;
-    margin-bottom: 25px;
-}
-
-.services .grid li h4{
-    color: #555;
+.card h4{
     font-size: 20px;
-    margin-bottom: 25px;
 }
-
-.services .grid li p{
-    margin: 0;
+.card .contenido p{
+    line-height: 1.7;
+    color: #000000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.card .contenido a{
+    text-decoration: none;
+    display: inline-block;
     padding: 10px;
+    margin-top: 10px;
+    color: #46ff48;
+    border: 2px solid #46ff48;
+    border-radius: 4px;
+    transition: all 400ms ease;
+}
+.card .contenido a:hover{
+    background: #46ff48;
+    color: white;
 }
 
 
@@ -341,8 +374,24 @@ ul.grid {
 .contact form .btn{
     padding: 18px 42px;
 }
+/*Descarca app section*/
 
 .descarga-app{
     background: #99fd76;
 }
+.descarga-app h3{
 
+}
+.descarga-app p{
+    text-align: left;
+    margin-top: 10px;
+    font-size: 20px;
+    position: relative;
+
+}
+.descarga-app img{
+    height: 300px;
+    position: absolute;
+    right: 30px;
+
+}
