@@ -127,6 +127,21 @@ footer img{
     color: #1c1b1b;
     font-size: 18px;
 }
+.footer-menu-container li{
+    transition: all 0.3s ease 0s;
+}
+.footer-menu-container li:hover{
+    transform: scale(1.2);
+}
+.footer-menu-container li a{
+    text-decoration: none;
+    color: #1c1b1b;
+    font-size: 18px;
+}
+.footer-menu-container li a:hover{
+    color: #ffffff;
+    text-shadow: 1px 1px 3px #000001;
+}
 .menu-item{
     margin: 1rem 1.5rem;
     cursor: pointer;
@@ -150,6 +165,7 @@ html {
 
 ul{
     list-style: none;
+
 }
 
 .hero a{
@@ -159,12 +175,12 @@ ul{
 
 }
 .hero a.btn{
-    font-size: 18px;
+    font-size: 30px;
     color: #ffffff;
     border-radius: 50px;
     text-transform: uppercase;
     text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6);
-    background-color: #46ff48;
+    background-color: #43d42d;
     font-weight: 600;
     text-align: center;
     padding: 10px 20px;
@@ -173,7 +189,10 @@ ul{
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.6);
     transition: all 0.3s ease 0s;
 }
+.hero a.btn:hover{
 
+
+}
 hr {
     background-color: #46ff48;
     width: 150px;
@@ -229,9 +248,16 @@ ul.grid {
 .hero {
     position: relative;
     justify-content: center;
-    min-height: 100vh;
+    height: 90vh;
+    min-height: 80vh;
     color: #fff;
     text-align: center;
+    background-image: linear-gradient(to top, rgba(28, 27, 27, 0.5), rgb(23, 178, 13,0.3)),url("../images/fondobici.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+
 }
 .background-image{
     position: relative;
@@ -255,13 +281,16 @@ ul.grid {
 
 .hero h1{
     font: bold 60px'Open Sans', sans-serif;
-    margin-bottom: 15px;
+    margin-bottom: 80px;
     text-shadow: 0px 0px 10px rgb(0, 0, 0);
 }
 
 .hero h3{
-    font: normal 20px'Open Sans', sans-serif;
-    margin-bottom: 40px;
+    font: normal 25px'Open Sans', sans-serif;
+    width: 50%;
+    margin-bottom: 0px;
+    margin-top: 15px;
+    text-shadow: 1px 1px 5px #000000;
 }
 
 /* Our Work Section*/
@@ -279,6 +308,16 @@ ul.grid {
     width: 100%;
     display: flex;
     background-color: #99fd76;
+}
+.services h3{
+    padding-top: 0px;
+    position: relative;
+    top: -50px;
+}
+
+.services hr{
+    position: relative;
+    top:-50px
 }
 .card {
     width: 35%;
@@ -326,10 +365,76 @@ ul.grid {
     background: #46ff48;
     color: white;
 }
+/*Buscar en mapa*/
+.ubicacion {
 
+    display: flex;
+    position: relative;
+    top: -450px;
+    left: 350px;
+    justify-content: space-between;
+}
 
+.ubicacion .search-input-group {
+    flex-grow: 1;
+    display: flex;
+}
+
+.ubicacion .input-item {
+    padding: 20px 10px 10px 15px;
+    background: #fff;
+    border-right: 1px solid #e0e0e0;
+    flex: auto;
+}
+
+.ubicacion .input-item.first {
+    border-radius: 3px 0 0 3px;
+}
+
+.ubicacion .input-item.last {
+    border-radius: 0 3px 3px 0;
+}
+
+.ubicacion label {
+    color: #17b20d;
+    font-weight: 500;
+    display: block;
+    line-height: 1.15;
+}
+
+.ubicacion select {
+    border: 0;
+    padding: 0;
+    color: #6f6f6f;
+    font-size: 0.875rem;
+}
+
+.ubicacion button {
+    background: #17b20d;
+    color: white;
+    font-size: 1.125em;
+    height: 80px;
+    padding: 0 15px;
+    border-radius: 3px;
+    border: 0;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: all .2s ease-out, color .2s ease-out;
+}
+
+.ubicacion button:hover {
+    background: #9fc79b;
+    color: #1c1b1b;
+
+}
+.mapa iframe{
+    position: relative;
+    top: -440px;
+    left: 350px;
+    margin-bottom: -400px;
+}
 /* Reviews Section*/
-
+/*
 .reviews {
     background-color: white;
 }
@@ -348,6 +453,7 @@ ul.grid {
     font-size: 15px;
     margin-bottom: 50px;
 }
+*/
 
 /* Contact Section */
 .contact {
@@ -371,27 +477,46 @@ ul.grid {
     color: #555555;
 }
 
-.contact form .btn{
+.contact .btn{
     padding: 18px 42px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    background: #17b20d;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
 }
 /*Descarca app section*/
 
 .descarga-app{
     background: #99fd76;
+    position: relative;
 }
-.descarga-app h3{
-
+.descarga-app h3 {
+    text-align: left;
+    font-size: 80px;
+    font-weight: bold;
+    position: absolute;
+    left: 150px;
+    top: 60px;
 }
 .descarga-app p{
     text-align: left;
-    margin-top: 10px;
-    font-size: 20px;
+    font-size: 30px;
     position: relative;
+    margin: 20px;
+    left: -300px;
+    background-color: rgba(255, 255, 255, 0.87);
+    border-radius: 8px;
 
 }
 .descarga-app img{
     height: 300px;
     position: absolute;
     right: 30px;
-
+    top: 60px;
+    cursor: pointer;
 }
